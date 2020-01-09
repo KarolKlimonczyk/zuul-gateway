@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: zuul
+
+server:
+  port: 8011
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka
+
+users-ms-context: /users-ms/
+api:
+  login:
+    url:
+      path: ${users-ms-context}login
+    registration:
+      url:
+        path: ${users-ms-context}users/new

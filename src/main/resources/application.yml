@@ -1,3 +1,7 @@
+app:
+  jwt:
+    secret: ZWxvZWxvMTEyM2Fzc2Rm
+
 spring:
   application:
     name: zuul
@@ -13,8 +17,8 @@ eureka:
 users-ms-context: /users-ms/
 api:
   login:
-    url:
-      path: ${users-ms-context}login
-    registration:
-      url:
-        path: ${users-ms-context}users/new
+    url: ${users-ms-context}login
+  registration:
+    url: ${users-ms-context}users/create
+  h2-console:
+    url: ${users-ms-context}h2-console/**

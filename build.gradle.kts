@@ -32,6 +32,8 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-zuul")
     implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation(group = "io.jsonwebtoken", name = "jjwt", version = "0.9.1")
+    implementation(group = "javax.xml.bind", name = "jaxb-api", version = "2.3.1")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")

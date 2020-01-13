@@ -1,7 +1,3 @@
-app:
-  jwt:
-    secret: ZWxvZWxvMTEyM2Fzc2Rm
-
 spring:
   application:
     name: zuul

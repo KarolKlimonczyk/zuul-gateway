@@ -33,6 +33,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-zuul")
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
+    implementation("org.springframework.cloud:spring-cloud-starter-bus-amqp")
     implementation(group = "io.jsonwebtoken", name = "jjwt", version = "0.9.1")
     implementation(group = "javax.xml.bind", name = "jaxb-api", version = "2.3.1")
     developmentOnly("org.springframework.boot:spring-boot-devtools")

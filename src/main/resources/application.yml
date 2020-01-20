@@ -16,6 +16,12 @@ eureka:
     service-url:
       defaultZone: http://localhost:8010/eureka
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans, health, routes, httptrace
+
 users-ms-context: /users-ms/
 api:
   login:
@@ -24,3 +30,5 @@ api:
     url: ${users-ms-context}users/create
   h2-console:
     url: ${users-ms-context}h2-console/**
+  actuator:
+    url: ${users-ms-context}actuator/**

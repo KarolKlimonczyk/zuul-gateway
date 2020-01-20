@@ -19,6 +19,8 @@ class WebSecurityConfig(val env: Environment) : WebSecurityConfigurerAdapter() {
                 .antMatchers(HttpMethod.POST, this.env.getProperty("api.login.url")).permitAll()
                 .antMatchers(HttpMethod.POST, this.env.getProperty("api.registration.url")).permitAll()
                 .antMatchers(this.env.getProperty("api.h2-console.url")).permitAll()
+                .antMatchers(this.env.getProperty("api.actuator.url")).permitAll()
+                .antMatchers("/actuator/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(AuthorizationFilter(this.authenticationManager(), this.env))
